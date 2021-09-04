@@ -10,21 +10,8 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
-            //宣告雞
-            string chicken = "雞";
-            //宣告魚
-            string fish = "魚";
-            //宣告狗
-            string dog = "象";
-            //宣告形容詞
-            string lonely = "孤獨一隻";
-
-            //將他們做累加
-            Console.WriteLine(lonely + chicken);
-            Console.WriteLine(lonely + fish);
-            Console.WriteLine(lonely + dog);
-
-            Console.ReadKey();
+          
+          
         }
 
     }
@@ -208,7 +195,21 @@ namespace CsharpDemo
         /// </summary>
         void Day4_07()
         {
+            //宣告雞
+            string chicken = "雞";
+            //宣告魚
+            string fish = "魚";
+            //宣告狗
+            string dog = "象";
+            //宣告形容詞
+            string lonely = "孤獨一隻";
 
+            //將他們做累加
+            Console.WriteLine(lonely + chicken);
+            Console.WriteLine(lonely + fish);
+            Console.WriteLine(lonely + dog);
+
+            Console.ReadKey();
         }
     }
 }
