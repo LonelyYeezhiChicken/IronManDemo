@@ -10,10 +10,9 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
-          
-          
+           
+            Console.ReadKey();
         }
-
     }
     class Day2
     {
@@ -208,6 +207,177 @@ namespace CsharpDemo
             Console.WriteLine(lonely + chicken);
             Console.WriteLine(lonely + fish);
             Console.WriteLine(lonely + dog);
+
+            Console.ReadKey();
+        }
+    }
+    class Day5
+    {
+        /// <summary>
+        /// Day5-01
+        /// 基姆拉爾森計算公式
+        /// </summary>
+        void Day5_01()
+        {
+            //宣告今年
+            int y = 2021;
+            //宣告今月
+            int m = 9;
+            //宣告今日
+            int d = 6;
+
+            //套用基姆拉爾森計算公式
+            int week = (d + 2 * m + 3 * (m + 1) / 5 + y + y / 4 - y / 100 + y / 400 + 1) % 7;
+
+            //印出日期與星期
+            Console.WriteLine("2021/9/6 星期" + week);
+            Console.ReadKey();
+
+        }
+        /// <summary>
+        /// Day5-02
+        /// 3除以2
+        /// </summary>
+        void Day5_02()
+        {
+            //做三除以二的運算
+            int ans = 3 / 2;
+
+            //印出解答
+            Console.WriteLine("Ans : " + ans);
+            Console.ReadKey();
+
+        }
+        /// <summary>
+        /// Day5-03
+        /// 整數除法與浮點數除法
+        /// </summary>
+        void Day5_03()
+        {
+            //做整數除法，並賦值給浮點數變數
+            double x = 9 / 2;
+
+            //直接做浮點數除法
+            double y = 9.0 / 2;
+
+            //印出答案
+            Console.WriteLine("x = " + x + " ，y = " + y);
+            Console.ReadKey();
+
+        }
+        /// <summary>
+        /// Day5-04
+        /// 取餘運算子
+        /// </summary>
+        void Day5_04()
+        {
+            //分別將20~25與4做取餘運算
+            int no20 = 20 % 4;
+            int no21 = 21 % 4;
+            int no22 = 22 % 4;
+            int no23 = 23 % 4;
+            int no24 = 24 % 4;
+            int no25 = 25 % 4;
+
+            //印結果
+            Console.WriteLine("20 % 4 =" + no20);
+            Console.WriteLine("21 % 4 =" + no21);
+            Console.WriteLine("22 % 4 =" + no22);
+            Console.WriteLine("23 % 4 =" + no23);
+            Console.WriteLine("24 % 4 =" + no24);
+            Console.WriteLine("25 % 4 =" + no25);
+
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day5-05
+        /// 梯形面積
+        /// </summary>
+        void Day5_05()
+        {
+            //宣告上底
+            int x = 30;
+            //宣告下底
+            int y = 52;
+            //宣告高
+            int z = 46;
+
+            //進行計算
+            int ans = (x + y) * z / 2;
+
+            //印出答案 
+            Console.WriteLine("Ans : " + ans);
+
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day5-06
+        /// 後置遞增運算子
+        /// </summary>
+        void Day5_06()
+        {
+            //宣告我今年48歲
+            int age = 48;
+            Console.WriteLine("我今年" + age + "歲");
+
+            //使用後置遞增運算子，計算明年年紀
+            age++;
+            Console.WriteLine("我明年" + age + "歲");
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day5-07
+        /// 比較前置，後置遞增運算子
+        /// </summary>
+        void Day5_07()
+        {
+            //後置遞增運算子，印出它的變化過程
+            Console.WriteLine("--後置運算子--");
+            int x = 1;
+            Console.WriteLine(x);
+            Console.WriteLine(x++);
+            Console.WriteLine(x);
+
+            //前置遞增運算子，印出它的變化過程
+            Console.WriteLine("--前置運算子--");
+            int y = 1;
+            Console.WriteLine(y);
+            Console.WriteLine(++y);
+            Console.WriteLine(y);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day5-08
+        /// 比較前置，後置遞減運算子
+        /// </summary>
+        void Day5_08()
+        {
+            //後置遞增運算子，印出它的變化過程
+            //遞減運算子
+            int x = 5;
+            //後置
+            Console.WriteLine(x--);
+            //前置
+            Console.WriteLine(--x);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day5-09
+        /// 加法指派運算子 += 
+        /// </summary>
+        void Day5_09()
+        {
+            //加法指派運算子 += (整數版)
+            Console.WriteLine("--整數版--");
+            int x = 10;
+            x += 100;
+            Console.WriteLine(x);
+
+            //加法指派運算子 += (字串版)
+            Console.WriteLine("--字串版--");
+            string name = "孤獨一隻雞";
+            name += " 史上最帥!";
+            Console.WriteLine(name);
 
             Console.ReadKey();
         }
