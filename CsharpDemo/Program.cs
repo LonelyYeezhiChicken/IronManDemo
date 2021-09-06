@@ -10,7 +10,126 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
-          
+            //今天
+            
+            Console.ReadKey();
+        }
+    }
+    class Day7
+    {
+        /// <summary>
+        /// Day7-01
+        /// if陳述式
+        /// </summary>
+        void Day7_01()
+        {
+            //宣告天氣
+            string weather = "下雨";
+            Console.WriteLine("今天天氣 : " + weather);
+
+            //使用if陳述句來做判斷
+            if (weather == "下雨")
+            {
+                Console.WriteLine("待在家");
+            }
+            else
+            {
+                Console.WriteLine("出去玩");
+            }
+
+            //把天氣改成晴天，再做一次判斷試試看
+            weather = "晴天";
+            Console.WriteLine("今天天氣 : " + weather);
+
+            //使用if陳述句來做判斷
+            if (weather == "下雨")
+            {
+                Console.WriteLine("待在家");
+            }
+            else
+            {
+                Console.WriteLine("出去玩");
+            }
+
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day7-02
+        /// if陳述式-判斷數字的大小
+        /// </summary>
+        void Day7_02()
+        {
+            Console.WriteLine("請輸入年齡");
+            //宣告年齡，並將輸入的值賦予給他
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            //判斷年齡
+            if (age < 18)
+            {
+                Console.WriteLine(age + " 歲是未成年，不可進入!");
+            }
+            else
+            {
+                Console.WriteLine(age + " 歲已成年，歡迎光臨!");
+            }
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day7-03
+        /// else if
+        /// </summary>
+        void Day7_03()
+        {
+            Console.WriteLine("請輸入年齡");
+            Console.WriteLine("請輸入年齡");
+            //宣告年齡，並將輸入的值賦予給他
+            int age = Convert.ToInt32(Console.ReadLine());
+
+            //判斷年齡
+            if (age < 18)
+            {
+                Console.WriteLine(age + " 歲是未成年，任何駕照都不能考!");
+            }
+            else if (age < 20)
+            {
+                Console.WriteLine(age + " 歲，可以考機車駕照，但不能考重機駕照!");
+            }
+            else
+            {
+                Console.WriteLine(age + " 歲，任何駕照都可以考!");
+            }
+
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day7-04
+        /// 巢狀 if
+        /// </summary>
+        void Day7_04()
+        {
+            Console.WriteLine("今天星期幾?");
+            string today = Console.ReadLine();
+            //天氣
+            Console.WriteLine("今天天氣?");
+            string weather = Console.ReadLine();
+
+            //先判斷今天日是不是假日
+            if (today == "星期六" || today == "星期日")
+            {
+                if (weather == "晴天")
+                {
+                    Console.WriteLine("今天" + today + "，" + weather + ",來去海邊玩");
+                }
+                else
+                {
+                    Console.WriteLine("今天" + today + "，" + weather + ",來去爬山");
+                }
+            }
+            else
+            {
+                Console.WriteLine("今天" + today + "，所以要上課");
+            }
+
             Console.ReadKey();
         }
     }
