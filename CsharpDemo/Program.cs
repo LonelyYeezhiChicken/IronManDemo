@@ -11,9 +11,50 @@ namespace CsharpDemo
         static void Main(string[] args)
         {
            
-
             Console.ReadKey();
         }
+    }
+    class Day9
+    {
+        /// <summary>
+        /// Day9-01
+        /// 1+到100 for迴圈
+        /// </summary>
+        void Day9_01()
+        {
+            //宣告一個整數，來讓他自增
+            int sum = 0;
+
+            //開始使用for迴圈
+            for (int i = 1; i <= 100; i++)
+            {
+                sum += i;//使用指派運算子
+            }
+
+            //看結果
+            Console.WriteLine(sum);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day9-02
+        /// n!
+        /// </summary>
+        void Day9_02()
+        {
+            //讀取用戶輸入的數字
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            //宣告一個長整數變數
+            long a = 1;
+            for (int i = 1; i <= n; i++)
+            {
+                //做乘法的累計
+                a *= i;
+            }
+            Console.WriteLine(n + "! = " + a);
+            Console.ReadKey();
+        }
+
     }
     class Day8
     {
