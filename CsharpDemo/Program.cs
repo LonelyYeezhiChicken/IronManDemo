@@ -14,6 +14,100 @@ namespace CsharpDemo
             Console.ReadKey();
         }
     }
+    class Day10
+    {
+        /// <summary>
+        /// Day10-01
+        /// 倒數10~1，數到1時就喊新年快樂
+        /// </summary>
+        void Day10_01()
+        {
+            //先宣告一個開關
+            bool open = true;
+
+            //宣告一個倒數用的整數變數
+            int number = 10;
+
+            //開始執行倒數
+            while (open)
+            {
+                //如果數到1就把開關關掉，下次就不會執行
+                if (number == 1)
+                {
+                    open = false;
+                }
+
+                //印出當前數字，印完後就減一
+                Console.WriteLine(number--);
+            }
+            //都倒數完後就喊新年快樂
+            Console.WriteLine("新年快樂!");
+
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day10-02
+        /// 倒數10~1，數到1時就喊新年快樂，break版
+        /// </summary>
+        void Day10_02()
+        {
+            //先宣告一個開關
+            bool open = true;
+
+            //宣告一個倒數用的整數變數
+            int number = 10;
+
+            //開始執行倒數
+            while (open)
+            {
+
+                //印出當前數字
+                Console.WriteLine(number);
+
+                //如果數到1就break，放後面的原因是berak後就不會執行了
+                if (number == 1)
+                {
+                    //執行到這邊就中斷
+                    break;
+                }
+                //break後就不會執行了，所以遞減放到後面
+                number--;
+            }
+            //都倒數完後就喊新年快樂
+            Console.WriteLine("新年快樂!");
+
+            //我們寫看看開關的值
+            Console.WriteLine("開關 = " + open);
+
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day10-03
+        /// 印出1~10的偶數
+        /// </summary>
+        void Day10_03()
+        {
+            //宣告一個計數用的整數變數
+            int number = 0;
+
+            //開始執行計數
+            while (number < 11)
+            {
+                //先做加一
+                number++;
+                //如果不是偶數，本次後面就不執行了
+                if (number % 2 != 0)
+                {
+                    continue;
+                }
+                //印出當前數字，並加一
+                Console.WriteLine(number);
+            }
+
+            Console.ReadKey();
+        }
+
+    }
     class Day9
     {
         /// <summary>
@@ -54,7 +148,6 @@ namespace CsharpDemo
             Console.WriteLine(n + "! = " + a);
             Console.ReadKey();
         }
-
     }
     class Day8
     {
