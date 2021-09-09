@@ -7,7 +7,7 @@
 4. [[Day4]C# 雞礎觀念- 核心的數據成員~變數(二)](https://ithelp.ithome.com.tw/articles/10260056)
 5. [[Day5]C# 雞礎觀念- 讓變數學會七十二變的高手~運算子](https://ithelp.ithome.com.tw/articles/10260062)
 6. [[Day6]C# 雞礎觀念- 程式碼擁有判斷真假的能力~邏輯運算子](https://ithelp.ithome.com.tw/articles/10260417)
-7. [Day7]C# 雞礎觀念- 你有選擇障礙嗎? 交給if陳述式解決吧!
-8. [Day8]C# 雞礎觀念- 如果沒有如果，只有太多的如果switch陳述式
+7. [[Day7]C# 雞礎觀念- 你有選擇障礙嗎? 交給if陳述式解決吧!](https://ithelp.ithome.com.tw/articles/10260478)
+8. [[Day8]C# 雞礎觀念- 如果沒有如果，只有太多的如果switch陳述式](https://ithelp.ithome.com.tw/articles/10260868)
 9. [Day9]C# 雞礎觀念- 省去重複程式碼的好幫手~for迴圈
 10. [Day10]C# 雞礎觀念- 重播與停止 while迴圈與break
