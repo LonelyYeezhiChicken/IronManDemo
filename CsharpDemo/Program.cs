@@ -10,7 +10,97 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
-           
+            
+            Console.ReadKey();
+        }
+    }
+    class Day11
+    {
+        /// <summary>
+        /// Day11-01
+        /// 宣告星期的列舉
+        /// </summary>
+        enum WeekDays { 星期一, 星期二, 星期三, 星期四, 星期五, 星期六, 星期天 }
+        /// <summary>
+        /// Day11-01
+        /// 列舉定義星期
+        /// </summary>
+        void Day11_01()
+        {
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            //將讀到的數字轉為星期
+            WeekDays today = (WeekDays)a;
+
+            //判斷今天是否為假日
+            if ((today == WeekDays.星期天 || today == WeekDays.星期六))
+            {
+                Console.WriteLine("放!假!啦!!!!");
+            }
+            else
+            {
+                Console.WriteLine("無情上班日!");
+            }
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// short型別的列舉
+        /// </summary>
+        enum WeekDays_02 : short
+        {
+            星期一,
+
+            星期二,
+            星期三,
+            星期四,
+            星期五,
+            星期六,
+            星期日
+        }
+        /// <summary>
+        /// 學生，結構體
+        /// </summary>
+        struct Student
+        {
+            //學號
+            public int number;
+            //姓名
+            public string name;
+            //性別
+            public string sex;
+            //生日
+            public string birthday;
+        }
+        /// <summary>
+        /// Day11-02
+        /// 結構體
+        /// </summary>
+        void Day11_02()
+        {
+            Student boy;//宣告變數boy
+            boy.number = 5487;
+            boy.name = "孤獨一隻雞";
+            boy.sex = "公";
+            boy.birthday = "1111.01.01";
+
+
+            Student girl;//宣告變數girl
+            girl.number = 9527;
+            girl.name = "孤獨九十九隻雞";
+            girl.sex = "母";
+            girl.birthday = "9999.09.09";
+
+
+            Console.WriteLine("學號:" + boy.number);
+            Console.WriteLine("姓名:" + boy.name);
+            Console.WriteLine("性別:" + boy.sex);
+            Console.WriteLine("生日:" + boy.birthday);
+            Console.WriteLine("");
+
+            Console.WriteLine("學號:" + girl.number);
+            Console.WriteLine("姓名:" + girl.name);
+            Console.WriteLine("性別:" + girl.sex);
+            Console.WriteLine("生日:" + girl.birthday);
             Console.ReadKey();
         }
     }
