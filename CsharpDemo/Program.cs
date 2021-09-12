@@ -10,7 +10,65 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
-            
+            //宣告整數陣列
+            int[] scores = { 70, 89, 72, 93 };
+
+            //宣告總和
+            int sum = 0;
+
+            //使用for迴圈，條件為陣列的長度
+            for (int i = 0; i < scores.Length; i++)
+            {
+                Console.WriteLine(scores[i]);
+                sum += scores[i];
+            }
+
+            //將總和的分數除以陣列長度(總共幾門科)
+            float average = sum / (scores.Length);
+            Console.WriteLine("總分" + sum);
+            Console.WriteLine("平均值" + average);
+
+            Console.ReadKey();
+        }
+    }
+    class Day12
+    {
+        /// <summary>
+        /// Day12-01
+        /// 整數陣列
+        /// </summary>
+        void Day12_01()
+        {
+
+            //宣告整數陣列
+            int[] scores = { 70, 89, 72, 93 };
+
+            //計算總合
+            int sum = scores[0] + scores[1] + scores[2] + scores[3];
+
+            Console.WriteLine("總合 : " + sum);
+
+            //計算平均值
+            Console.WriteLine("平均值 : " + (sum / 4));
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day12-02
+        /// 整數陣列-for迴圈
+        /// </summary>
+        void Day12_02()
+        {
+            int[] scores = { 120, 149, 112, 133 };
+            int sum = 0;
+            for (int i = 0; i < scores.Length; i++)
+            {
+                Console.WriteLine(scores[i]);
+                sum += scores[i];
+            }
+            float average = sum / (scores.Length);
+            Console.WriteLine("總分" + sum);
+            Console.WriteLine("平均值" + average);
+
             Console.ReadKey();
         }
     }
