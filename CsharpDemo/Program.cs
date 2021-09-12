@@ -10,23 +10,28 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
-            //宣告整數陣列
-            int[] scores = { 70, 89, 72, 93 };
+           
 
-            //宣告總和
-            int sum = 0;
+            Console.ReadKey();
+        }
+    }
+    class Day13
+    {
+        /// <summary>
+        /// Day13-01
+        /// forech
+        /// </summary>
+        void Day13_01()
+        {
+            //宣告一個字串陣列
+            string[] storyArray = { "1.我是一顆蛋", "2.破殼而出", "3.吃了幾顆飼料，好飽", "4.漸漸長大成肉雞", "5.農場主人來在大家去市場玩", "6.因為太邊緣所以沒上到車", "7.大家一去就沒回來", "8.成為孤獨一隻雞" };
 
-            //使用for迴圈，條件為陣列的長度
-            for (int i = 0; i < scores.Length; i++)
+            Console.WriteLine("這是很久很久以前，有一隻雞的故事");
+            //使用foreach處理陣列
+            foreach (string story in storyArray)
             {
-                Console.WriteLine(scores[i]);
-                sum += scores[i];
+                Console.WriteLine(story);
             }
-
-            //將總和的分數除以陣列長度(總共幾門科)
-            float average = sum / (scores.Length);
-            Console.WriteLine("總分" + sum);
-            Console.WriteLine("平均值" + average);
 
             Console.ReadKey();
         }
