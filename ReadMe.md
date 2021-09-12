@@ -12,5 +12,6 @@
 9. [[Day9]C# 雞礎觀念- 省去重複程式碼的好幫手~for迴圈](https://ithelp.ithome.com.tw/articles/10260956)
 10. [[Day10]C# 雞礎觀念- 重播與停止 while迴圈與break](https://ithelp.ithome.com.tw/articles/10261235)
 11. [[Day11]C# 雞礎觀念- 把複雜的事情與關係簡單化~列舉與結構](https://ithelp.ithome.com.tw/articles/10261964)
-12. [Day12]C# 雞礎觀念- 當我們同在一起~陣列(Array)
+12. [[Day12]C# 雞礎觀念- 當我們同在一起~陣列(Array)](https://ithelp.ithome.com.tw/articles/10262630)
 13. [Day13]C# 雞礎觀念- 來個輪迴吧~foreach迴圈
+14. [Day14]C# 雞礎觀念- 不同層次的陣列~二維陣列

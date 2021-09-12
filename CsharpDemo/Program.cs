@@ -10,7 +10,48 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
-           
+          
+            Console.ReadKey();
+        }
+    }
+    class Day14
+    {
+        /// <summary>
+        /// Day14-01
+        /// 二維陣列
+        /// </summary>
+        void Day14_01()
+        {
+            //宣告一個二維陣列
+            int[,] Matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+
+            //開始照著陣列的樣子排列吧
+            Console.Write(Matrix[0, 0]); Console.Write(Matrix[0, 1]); Console.WriteLine(Matrix[0, 2]);//第一行
+            Console.Write(Matrix[1, 0]); Console.Write(Matrix[1, 1]); Console.WriteLine(Matrix[1, 2]);//第二行
+            Console.Write(Matrix[2, 0]); Console.Write(Matrix[2, 1]); Console.WriteLine(Matrix[2, 2]);//第三行
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day14-02
+        /// 二維陣列
+        /// </summary>
+        void Day14_02()
+        {
+            //宣告一個二維陣列
+            int[,] Matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+
+            //使用雙重迴圈
+            //第一層，表示第幾行
+            for (int i = 0; i < 3; i++)
+            {
+                //第二層，表示第幾列，由於變數i已用過所以習慣上會用j
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write(Matrix[i, j] + " ");
+                }
+                //我們這邊要用一個特別的符號，換行符號"\n"在C#中表示換行
+                Console.Write("\n");
+            }
 
             Console.ReadKey();
         }
