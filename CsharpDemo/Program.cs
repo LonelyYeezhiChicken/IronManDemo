@@ -6,13 +6,167 @@ using System.Threading.Tasks;
 
 namespace CsharpDemo
 {
+    
     class Program
     {
         static void Main(string[] args)
         {
-          
+           
             Console.ReadKey();
         }
+    }
+    class Day15
+    {
+        /// <summary>
+        /// Day15-01
+        /// 宣告List
+        /// </summary>
+        void Day15_01()
+        {
+            //宣告一個List
+            List<string> myList = new List<string>() { "鼠", "牛", "虎", "兔", "龍", "蛇", "馬", "羊", "猴", "雞", "狗", "豬" };
+
+            Console.WriteLine("出來吧12生肖!");
+            //我們使用foreach迴圈來列出List的值
+            foreach (string item in myList)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day15-02
+        /// 新增Add()
+        /// </summary>
+        void Day15_02()
+        {
+            //宣告一個List
+            List<string> myList = new List<string>() { "鼠", "牛", "虎", "兔", "龍", "蛇", "馬", "羊", "猴", "雞", "狗", "豬" };
+
+            //使用Add()新增熊
+            myList.Add("熊");
+
+            Console.WriteLine("出來吧13生肖!");
+            //我們使用foreach迴圈來列出List的值
+            foreach (string item in myList)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day15-03
+        /// 新增AddRange()
+        /// </summary>
+        void Day15_03()
+        {
+            //宣告一個List
+            List<string> myList = new List<string>() { "鼠", "牛", "虎", "兔", "龍", "蛇", "馬", "羊", "猴", "雞", "狗", "豬" };
+            //宣告一個要新增的List
+            List<string> newList = new List<string>() { "熊", "象", "魚" };
+
+            //AddRange()將newList新增到myList中
+            myList.AddRange(newList);
+
+            //使用Count()來表示List筆數
+            Console.WriteLine("出來吧" + myList.Count() + "生肖!");
+            //我們使用foreach迴圈來列出List的值
+            foreach (string item in myList)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day15-04
+        /// 移除Remove()
+        /// </summary>
+        void Day15_04()
+        {
+            //宣告一個List
+            List<string> myList = new List<string>() { "鼠", "牛", "虎", "兔", "龍", "蛇", "馬", "羊", "猴", "雞", "狗", "豬", "熊", "象", "魚" };
+
+            //使用Remove()移除魚
+            myList.Remove("魚");
+
+            //使用Count()來表示List筆數
+            Console.WriteLine("出來吧" + myList.Count() + "生肖!");
+            //我們使用foreach迴圈來列出List的值
+            foreach (string item in myList)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day15-05
+        /// 範圍移除Remove()
+        /// </summary>
+        void Day15_05()
+        {
+            //宣告一個List
+            List<string> myList = new List<string>() { "鼠", "牛", "虎", "兔", "龍", "蛇", "馬", "羊", "猴", "雞", "狗", "豬", "熊", "象", "魚" };
+
+            //使用Remove()移除魚
+            myList.Remove("魚");
+
+            //使用Count()來表示List筆數
+            Console.WriteLine("出來吧" + myList.Count() + "生肖!");
+            //我們使用foreach迴圈來列出List的值
+            foreach (string item in myList)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day15-06
+        /// 使用class List
+        /// </summary>
+        void Day15_06()
+        {
+            //宣告一個List
+            List<DataModel> dataList = new List<DataModel>();
+            //宣告一個List
+            List<string> myList = new List<string>() { "鼠", "牛", "虎", "兔", "龍", "蛇", "馬", "羊", "猴", "雞", "狗", "豬" };
+
+            //宣告整數來算月份
+            int Count = 1;
+            //我們使用foreach迴圈來填寫dataList的值
+            foreach (string item in myList)
+            {
+                //新增一筆新的資料所以我們要使用new
+                dataList.Add(new DataModel
+                {
+                    month = Count,
+                    animal = item
+                });
+
+                //進入下個月
+                Count++;
+            }
+
+            //使用Count()來表示List筆數
+            Console.WriteLine("出來吧" + dataList.Count() + "生肖!");
+            //我們使用foreach迴圈來列出List的值
+            foreach (DataModel item in dataList)
+            {
+                //這邊需要用item.物件名稱，才有辦法取到值
+                Console.WriteLine(item.month + "月 , 屬 :" + item.animal);
+            }
+            Console.ReadKey();
+        }
+    }
+    //建立一個class
+    class DataModel
+    {
+        //月份
+        public int month;
+        //動物
+        public string animal;
+
     }
     class Day14
     {
