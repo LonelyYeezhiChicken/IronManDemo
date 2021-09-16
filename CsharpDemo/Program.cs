@@ -6,13 +6,70 @@ using System.Threading.Tasks;
 
 namespace CsharpDemo
 {
-    
+
     class Program
     {
         static void Main(string[] args)
         {
            
+        }
+        
+
+    }
+    class Day16
+    {
+        /// <summary>
+        /// Day16-01
+        /// 宣告List
+        /// </summary>
+        void Day16_01()
+        {
+
+            //我們來呼叫方法並賦值給變數
+            string animal = GetChicken();
+            Console.WriteLine(animal);
             Console.ReadKey();
+        }
+        /// <summary>
+        /// Day16-01
+        /// 宣告字串方法
+        /// </summary>
+        /// <returns></returns>
+        static string GetChicken()
+        {
+            return "孤獨一隻雞";
+        }
+        /// <summary>
+        /// Day16-02
+        /// 宣告List
+        /// </summary>
+        void Day16_02()
+        { 
+            //來取得過去的一個時間吧
+            string MtDate = GetDate(1995, 4, 9);
+            Console.WriteLine(MtDate);
+
+            //來取得今日的時間吧
+            MtDate = GetDate(2021, 9, 17);
+            Console.WriteLine(MtDate);
+            Console.ReadKey();
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day16-02
+        /// 宣告字串方法
+        /// </summary>
+        /// <returns></returns>
+         //宣告一個組合日期的方法
+        static string GetDate(int y, int M, int d)
+        {
+            //因為值傳進來是正數所以需要轉成字串
+            string Date_y = Convert.ToString(y);//第一種轉型方式Convert.To...
+            string Date_M = M.ToString();//第二種轉型方式 參數.ToString()
+            string Date_d = d.ToString();
+
+            //組合回傳字串，用return回傳
+            return Date_y + "年 " + Date_M + "月 " + Date_d + "日";
         }
     }
     class Day15
