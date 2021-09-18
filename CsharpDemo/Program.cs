@@ -12,8 +12,78 @@ namespace CsharpDemo
         static void Main(string[] args)
         {
            
+            Console.ReadKey();
         }
-        
+      
+
+
+    }
+    class Day17
+    {
+        /// <summary>
+        /// Day17-01
+        /// 參數傳遞
+        /// </summary>
+        void Day17_01()
+        {
+            //宣告X整數
+            int x = Convert.ToInt32(Console.ReadLine());
+            //宣告y整數
+            int y = Convert.ToInt32(Console.ReadLine());
+
+            //呼叫Bigger方法，並將x，y的直傳入
+            int reault = Bigger(x, y);
+
+            Console.WriteLine("x = " + x + " ,y = " + y);
+            Console.WriteLine("最大值為" + reault);
+            Console.ReadKey();
+        }
+        /// <summary>
+        ///  Day17-01
+        /// 比較兩數大小的方法，將x y 傳入
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        static int Bigger(int x, int y)
+        {
+            //判斷x y誰大
+            int maxValue = (x >= y) ? x : y;
+            return maxValue;
+        }
+        /// <summary>
+        /// Day17-02
+        /// 址的傳遞
+        /// </summary>
+        void Day17_02()
+        {
+            //宣告一個Llist
+            List<string> myList = new List<string>() { "孤獨一隻雞", "人生一條蟲", "寂寞一隻鳥", "爆肝一隻鵝" };
+            Console.WriteLine("原始筆數 = " + myList.Count());
+
+            //呼叫方法並傳入List
+            int newCount = ListCount(myList);
+            Console.WriteLine("目前筆數 = " + newCount);
+
+            //這時候我們用foreach迴圈來拆解原本的List
+            foreach (string item in myList)
+            {
+                Console.Write(item + "  ");
+            }
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day17-02
+        /// 我們使用一個方法並接收list的傳遞，然後回傳list的筆數
+        /// </summary>
+        /// <param name="newList"></param>
+        /// <returns></returns>
+        static int ListCount(List<string> newList)
+        {
+            //我們在這list偷偷加一隻魚
+            newList.Add("高冷一隻魚");
+            return newList.Count();
+        }
 
     }
     class Day16
@@ -44,7 +114,7 @@ namespace CsharpDemo
         /// 宣告List
         /// </summary>
         void Day16_02()
-        { 
+        {
             //來取得過去的一個時間吧
             string MtDate = GetDate(1995, 4, 9);
             Console.WriteLine(MtDate);
