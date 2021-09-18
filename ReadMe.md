@@ -18,3 +18,4 @@
 15. [[Day15]C# 雞礎觀念- 多筆資料的好朋友~List](https://ithelp.ithome.com.tw/articles/10263958)
 16. [[Day16]C# 雞礎觀念- 虛擬代工廠~方法(function)](https://ithelp.ithome.com.tw/articles/10264618)
 17. [[Day17]C# 雞礎觀念- 像個郵差一樣~值與址的傳遞](https://ithelp.ithome.com.tw/articles/10266515)
+18. [Day18]C# 雞礎觀念- 回頭吧!孩子~ref 與 out 參數修飾詞

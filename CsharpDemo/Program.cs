@@ -14,9 +14,72 @@ namespace CsharpDemo
            
             Console.ReadKey();
         }
-      
+    
+    }
+    class Day18
+    {
+        /// <summary>
+        /// Day18-01
+        /// ref 關鍵字
+        /// </summary>
+        void Day18_01()
+        {
+            //宣告一隻雞
+            string chicken = "一隻雞";
+            Console.WriteLine("小時候 : " + chicken);
 
+            //呼叫成長方法
+            ChangAChicken(ref chicken);
 
+            Console.WriteLine("漂泊完回家後的雞 : " + chicken);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day18-01
+        /// 宣告小雞長大的方法，這邊使用常數方法，不需要做return
+        /// </summary>
+        /// <param name="newChicken"></param>
+        static void ChangAChicken(ref string newChicken)
+        {
+            //讓雞進化
+            newChicken = "孤獨" + newChicken;
+        }
+        /// <summary>
+        /// Day18-02
+        /// out 關鍵字
+        /// </summary>
+        void Day18_02()
+        {
+            //宣告圓半徑
+            double x = 4;
+            Console.WriteLine("圓半徑 : " + x);
+
+            //宣告圓周長
+            double y;
+
+            //呼叫計算方法
+            double area = GetArea(x, out y);
+
+            Console.WriteLine("圓周長 = " + y);
+            Console.WriteLine("圓面積 = " + area);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day18-02
+        /// 宣告方法來計算面積，要return 面積，out  圓周長
+        /// </summary>
+        /// <param name="r"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        static double GetArea(double r, out double y)
+        {
+            //計算圓周長
+            y = 2 * r * Math.PI;
+
+            //計算圓面積
+            double s = (r * r) * Math.PI;
+            return s;
+        }
     }
     class Day17
     {
@@ -84,7 +147,6 @@ namespace CsharpDemo
             newList.Add("高冷一隻魚");
             return newList.Count();
         }
-
     }
     class Day16
     {
