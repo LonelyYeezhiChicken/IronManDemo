@@ -14,7 +14,129 @@ namespace CsharpDemo
            
             Console.ReadKey();
         }
-    
+    }
+
+    class Day21
+    {
+        /// <summary>
+        /// Day21-01
+        /// 貓類別
+        /// </summary>
+        void Day21_01()
+        {
+            //使用類別前要先實例化
+            Cat cat = new Cat();
+
+            //填寫變數成員
+            Console.WriteLine("請輸入姓名:");
+            cat.name = Console.ReadLine();
+
+            Console.WriteLine("請輸入年齡:");
+            cat.age = Convert.ToInt32(Console.ReadLine());
+
+            //呼叫方法成員
+            //喵喵叫
+            cat.Meow();
+
+            //抓到老鼠
+            cat.CaseMice();
+
+            Console.ReadKey();
+        }
+    }
+    /// <summary>
+    /// Day21-01
+    /// 貓類別 
+    /// </summary>
+    class Cat
+    {
+        //名稱
+        public string name;
+        //年齡
+        public int age;
+        //老鼠數量
+        public int miceCount = 0; //記錄抓幾隻老鼠
+        //方法成員
+        //方法:打招呼
+        public void Hello()
+        {
+            Console.WriteLine("嗨!我是{0} ", name);
+        }
+        //方法:喵喵叫
+        public void Meow()
+        {
+            Hello();
+            Console.WriteLine("喵~~~~~喵~~~");
+        }
+        //方法:捉老鼠
+        public void CaseMice()
+        {
+            miceCount++;
+            Hello();
+            Console.WriteLine("我已經抓了 {0} 隻老鼠", miceCount);
+            Console.ReadKey();
+        }
+    }
+    class Day19
+    {
+        /// <summary>
+        /// Day19-01
+        /// 遞迴
+        /// </summary>
+        void Day19_01()
+        {
+            //呼叫遞迴方法
+            Fac(20);
+
+            Console.WriteLine("新年快樂!");
+            Console.ReadKey();
+        }
+        /// <summary>
+        ///  Day19-01
+        /// 宣告一個遞迴方法
+        /// </summary>
+        /// <param name="n"></param>
+        static void Fac(int n)
+        {
+            Console.WriteLine("n = " + n);
+            //如果n等於0之後就不呼叫自己
+            if (n != 0)
+            {
+                Fac(n - 1);
+            }
+        }
+        /// <summary>
+        /// Day19-02
+        /// 費波那契數列
+        /// </summary>
+        void Day19_02()
+        {
+            //呼叫遞迴方法
+            Fac(20);
+
+            Console.WriteLine("新年快樂!");
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day19-02
+        ///  宣告方法
+        /// </summary>
+        /// <param name="n"></param>
+        /// <returns></returns>
+        static int Fibonacci(int n)
+        {
+            if (n == 1 || n == 2)
+            {
+                //初始值
+                return 1;
+            }
+            else
+            {
+                //遞迴
+                return (Fibonacci(n - 1) + Fibonacci(n - 2));
+            }
+        }
+
     }
     class Day18
     {

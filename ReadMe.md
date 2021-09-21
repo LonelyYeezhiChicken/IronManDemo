@@ -18,4 +18,7 @@
 15. [[Day15]C# 雞礎觀念- 多筆資料的好朋友~List](https://ithelp.ithome.com.tw/articles/10263958)
 16. [[Day16]C# 雞礎觀念- 虛擬代工廠~方法(function)](https://ithelp.ithome.com.tw/articles/10264618)
 17. [[Day17]C# 雞礎觀念- 像個郵差一樣~值與址的傳遞](https://ithelp.ithome.com.tw/articles/10266515)
-18. [Day18]C# 雞礎觀念- 回頭吧!孩子~ref 與 out 參數修飾詞
+18. [[Day18]C# 雞礎觀念- 回頭吧!孩子~ref 與 out 參數修飾詞](https://ithelp.ithome.com.tw/articles/10266748)
+19. [[Day19]C# 雞礎觀念- 讓時間倒轉吧~遞迴](https://ithelp.ithome.com.tw/articles/10268036)
+20. [[Day20]C# 雞礎觀念- 物件導向(oop)基本觀念](https://ithelp.ithome.com.tw/articles/10268380)
+21. [Day21]C# 雞礎觀念- 物件導向(oop)~類別(class)
