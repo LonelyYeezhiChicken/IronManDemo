@@ -21,4 +21,5 @@
 18. [[Day18]C# 雞礎觀念- 回頭吧!孩子~ref 與 out 參數修飾詞](https://ithelp.ithome.com.tw/articles/10266748)
 19. [[Day19]C# 雞礎觀念- 讓時間倒轉吧~遞迴](https://ithelp.ithome.com.tw/articles/10268036)
 20. [[Day20]C# 雞礎觀念- 物件導向(oop)基本觀念](https://ithelp.ithome.com.tw/articles/10268380)
-21. [Day21]C# 雞礎觀念- 物件導向(oop)~類別(class)
+21. [[Day21]C# 雞礎觀念- 物件導向(oop)~類別(class)](https://ithelp.ithome.com.tw/articles/10268481)
+22. [Day22]C# 雞礎觀念- 物件導向(oop)~物件(Object)

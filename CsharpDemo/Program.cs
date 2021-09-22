@@ -11,11 +11,59 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
-           
+            //我們實例化兩個類
+            Cat cat1 = new Cat();
+            Cat cat2 = new Cat();
+
+            //填寫cat1數據成員
+            cat1.name = "慚愧一隻貓";
+            cat1.age = 10;
+
+            //填寫cat2數據成員
+            cat2.name = "無悔一隻貓";
+            cat2.age = 35;
+
+            //讓慚愧一隻貓抓兩隻老鼠
+            cat1.CaseMice();
+            cat1.CaseMice();
+
+            //讓無悔一隻貓抓一隻老鼠
+            cat2.CaseMice();
+
+            //顯示結果
+            Console.WriteLine("姓名 : " + cat1.name + ",年齡 : " + cat1.age + ",共抓 " + cat1.miceCount + " 隻老鼠");
+            Console.WriteLine("姓名 : " + cat2.name + ",年齡 : " + cat2.age + ",共抓 " + cat2.miceCount + " 隻老鼠");
+            Console.ReadKey();
+        }
+    }   
+    class Day22
+    {
+        /// <summary>
+        /// Day22-01
+        /// 實例化兩個類，比較差異
+        /// </summary>
+        void Day22_01()
+        {
+            //使用類別前要先實例化
+            Cat cat = new Cat();
+
+            //填寫變數成員
+            Console.WriteLine("請輸入姓名:");
+            cat.name = Console.ReadLine();
+
+            Console.WriteLine("請輸入年齡:");
+            cat.age = Convert.ToInt32(Console.ReadLine());
+
+            //呼叫方法成員
+            //喵喵叫
+            cat.Meow();
+
+            //抓到老鼠
+            cat.CaseMice();
+
             Console.ReadKey();
         }
     }
-
     class Day21
     {
         /// <summary>
@@ -46,6 +94,7 @@ namespace CsharpDemo
     }
     /// <summary>
     /// Day21-01
+    /// Day22-01
     /// 貓類別 
     /// </summary>
     class Cat
