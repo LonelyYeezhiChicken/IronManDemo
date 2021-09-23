@@ -22,4 +22,5 @@
 19. [[Day19]C# 雞礎觀念- 讓時間倒轉吧~遞迴](https://ithelp.ithome.com.tw/articles/10268036)
 20. [[Day20]C# 雞礎觀念- 物件導向(oop)基本觀念](https://ithelp.ithome.com.tw/articles/10268380)
 21. [[Day21]C# 雞礎觀念- 物件導向(oop)~類別(class)](https://ithelp.ithome.com.tw/articles/10268481)
-22. [Day22]C# 雞礎觀念- 物件導向(oop)~物件(Object)
+22. [[Day22]C# 雞礎觀念- 物件導向(oop)~物件(Object)](https://ithelp.ithome.com.tw/articles/10269967)
+23. [[Day23]C# 雞礎觀念- 物件導向(oop)~屬性(Property)](https://ithelp.ithome.com.tw/articles/10270718)

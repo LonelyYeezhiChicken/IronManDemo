@@ -11,6 +11,115 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
+
+
+            Console.ReadKey();
+        }
+    }
+    /// <summary>
+    /// Day23-02
+    /// 鴨的類別
+    /// </summary>
+    class Duck
+    {
+        //名稱
+        public string name;
+        //年齡
+        private int age;
+        //屬性
+        public int duckAge
+        {
+            get//回傳值
+            {
+                //回傳設定後的值
+                return age;
+            }
+            set //設定值
+            {
+                if (value <= 0)
+                {
+                    age = 0;
+                }
+                else
+                {
+                    age = value;
+                }
+            }
+        }
+    }
+    /// <summary>
+    /// Day23-01
+    /// 狗的類別
+    /// </summary>
+    class Dog
+    {
+        //名稱
+        public string name;
+        //年齡
+        private int age;
+
+        //設定年齡
+        public void SetAge(int ageValue)
+        {
+            //如果年齡為負數就改成0
+            if (ageValue <= 0)
+            {
+                age = 0;
+            }
+            else
+            {
+                age = ageValue;
+            }
+        }
+        //回傳設定後的年齡
+        public int GetAge()
+        {
+            return age;
+        }
+    }
+    class Day23
+    {
+        /// <summary>
+        /// Day23-01
+        /// 訪問器
+        /// </summary>
+        void Day23_01()
+        {
+            Dog dog = new Dog();
+            //設定為三歲
+            dog.SetAge(3);
+            Console.WriteLine(dog.GetAge());
+
+            //設定為-1歲
+            dog.SetAge(-1);
+            Console.WriteLine(dog.GetAge());
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day23-02
+        /// 屬性
+        /// </summary>
+        void Day23_02()
+        {
+            Duck duck = new Duck();
+            //設定為三歲
+            duck.duckAge = 3;
+            Console.WriteLine(duck.duckAge);
+
+            //設定為-1歲
+            duck.duckAge = -1;
+            Console.WriteLine(duck.duckAge);
+            Console.ReadKey();
+        }
+    }
+    class Day22
+    {
+        /// <summary>
+        /// Day22-01
+        /// 實例化兩個類，比較差異
+        /// </summary>
+        void Day22_01()
+        {
             //我們實例化兩個類
             Cat cat1 = new Cat();
             Cat cat2 = new Cat();
@@ -33,34 +142,6 @@ namespace CsharpDemo
             //顯示結果
             Console.WriteLine("姓名 : " + cat1.name + ",年齡 : " + cat1.age + ",共抓 " + cat1.miceCount + " 隻老鼠");
             Console.WriteLine("姓名 : " + cat2.name + ",年齡 : " + cat2.age + ",共抓 " + cat2.miceCount + " 隻老鼠");
-            Console.ReadKey();
-        }
-    }   
-    class Day22
-    {
-        /// <summary>
-        /// Day22-01
-        /// 實例化兩個類，比較差異
-        /// </summary>
-        void Day22_01()
-        {
-            //使用類別前要先實例化
-            Cat cat = new Cat();
-
-            //填寫變數成員
-            Console.WriteLine("請輸入姓名:");
-            cat.name = Console.ReadLine();
-
-            Console.WriteLine("請輸入年齡:");
-            cat.age = Convert.ToInt32(Console.ReadLine());
-
-            //呼叫方法成員
-            //喵喵叫
-            cat.Meow();
-
-            //抓到老鼠
-            cat.CaseMice();
-
             Console.ReadKey();
         }
     }
