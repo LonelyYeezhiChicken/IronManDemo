@@ -11,13 +11,98 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
+          
+            Console.ReadKey();
+        }
+    }
+    /// <summary>
+    /// Day24-03
+    /// 豬的類別
+    /// </summary>
+    class Pig
+    {
+        //名稱
+        public string name;
+        //年齡
+        public int age;
 
+        //使用建構方法
+        public Pig()
+        {
+            //初始化變數
+            name = "肥肥一隻豬";
+            age = 20;
+        }
+    }
+    /// <summary>
+    /// Day24-02
+    /// 豬的類別
+    /// </summary>
+    class Pig2
+    {
+        //名稱
+        public string name;
+        //年齡
+        public int age;
 
+        //使用建構方法
+        public Pig2(string nameValue, int ageValue)
+        {
+            //初始化變數
+            name = nameValue;
+            age = ageValue;
+        }
+    }
+    /// <summary>
+    /// Day24-01
+    /// 豬的類別
+    /// </summary>
+    class Pig1
+    {
+        //名稱
+        public string name;
+        //年齡
+        public int age;
+    }
+    class Day24
+    {
+        /// <summary>
+        /// Day24-01
+        /// 默認建構方法
+        /// </summary>
+        void Day24_01()
+        {
+            Pig1 pig = new Pig1();
+            Console.WriteLine("name = " + pig.name);
+            Console.WriteLine("age = " + pig.age);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day24-02
+        /// 傳值建構方法
+        /// </summary>
+        void Day24_02()
+        {
+            Pig2 pig = new Pig2("肥嘟嘟一隻豬", 3);
+            Console.WriteLine("name = " + pig.name);
+            Console.WriteLine("age = " + pig.age);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day24-03
+        /// 無參數建構方法
+        /// </summary>
+        void Day24_03()
+        {
+            Pig pig = new Pig();
+            Console.WriteLine("name = " + pig.name);
+            Console.WriteLine("age = " + pig.age);
             Console.ReadKey();
         }
     }
     /// <summary>
     /// Day23-02
+    /// Day24-01
     /// 鴨的類別
     /// </summary>
     class Duck
