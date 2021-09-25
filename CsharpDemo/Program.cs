@@ -7,14 +7,79 @@ using System.Threading.Tasks;
 namespace CsharpDemo
 {
 
+
     class Program
     {
         static void Main(string[] args)
         {
-          
+           
             Console.ReadKey();
         }
     }
+    //定義雞的類別
+    class Chicken
+    {
+        //宣告一個雞數量的靜態變數
+        public static int ChickenCount = 30;
+
+        //新的一天生四隻雞
+        public void NewDayChicken()
+        {
+            ChickenCount += 3;
+        }
+    }
+    //定義農夫的類別
+    class Farmer
+    {
+        public void GoToMarket()
+        {
+            //使用靜態變數不需要實例化
+            Chicken.ChickenCount -= 8;
+        }
+    }
+    class Day25
+    {
+        /// <summary>
+        /// Day25-01
+        ///靜態變數
+        /// </summary>
+        void Day25_01()
+        {
+            for (int i = 1; i <= 31; i++)
+            {
+                Console.WriteLine();
+                Console.WriteLine("---新的一天--");
+                Console.WriteLine("今天 : " + i + "號");
+                //新的一天需要生新的雞
+                Chicken chickenClass = new Chicken();
+                chickenClass.NewDayChicken();
+                Console.WriteLine("目前農場有 : " + Chicken.ChickenCount + "隻雞");
+
+                //判斷今天是否有要去市場
+                if ((i % 2) == 0)
+                {
+                    //農夫去市場賣雞
+                    Farmer farmerClass = new Farmer();
+                    Console.WriteLine("農夫載雞去賣了...");
+                    farmerClass.GoToMarket();
+                    Console.WriteLine("賣完雞後剩下 : " + Chicken.ChickenCount + "隻雞");
+                }
+                //判斷雞還剩幾隻
+                if (Chicken.ChickenCount <= 0)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("!!!!!!!雞被賣光光了!!!!!");
+                    Console.WriteLine("農場倒閉!");
+
+                    //既然營業不下去就跳脫迴圈吧
+                    break;
+                }
+            }
+            Console.ReadKey();
+        }
+        
+    }
+
     /// <summary>
     /// Day24-03
     /// 豬的類別
