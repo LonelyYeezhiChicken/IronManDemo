@@ -12,11 +12,129 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
-          
+            
             Console.ReadKey();
         }
     }
-    // 定義計算的類別
+    class Day27
+    {
+        /// <summary>
+        /// Day26-01
+        /// Exception
+        /// </summary>
+        void Day27_01()
+        {
+            //宣告分子
+            int x = 100;
+
+            //宣告分母
+            int y = 0;
+
+            int z = x / y;
+
+            Console.WriteLine("結果 : " + z);
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day27-02
+        /// try-catch
+        /// </summary>
+        void Day26_02()
+        {
+
+            try
+            {
+                Console.WriteLine("請輸入分母");
+                //宣告分子
+                int x = 100;
+
+                //宣告分母
+                int y = Convert.ToInt32(Console.ReadLine());
+
+                int z = x / y;
+
+                Console.WriteLine("結果 : " + z);
+            }
+            catch (DivideByZeroException)//捕捉分母為0的錯誤
+            {
+                Console.WriteLine("分母不可以為0");
+            }
+            catch (FormatException)//捕捉格式錯誤
+            {
+                Console.WriteLine("格式不正確");
+            }
+
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day27-02
+        /// try-catch-finally
+        /// </summary>
+        void Day26_03()
+        {
+            try
+            {
+                Console.WriteLine("請輸入分母");
+                //宣告分子
+                int x = 100;
+
+                //宣告分母
+                int y = Convert.ToInt32(Console.ReadLine());
+
+                int z = x / y;
+
+                Console.WriteLine("結果 : " + z);
+            }
+            catch (Exception ex)//捕捉所有發生的錯誤，如果不知道可能會發生的錯誤可以使用此類別
+            {
+                //ex.Message可得到簡易的錯誤描述，如果需要詳情，建議使用 ex.ToString()
+                Console.WriteLine(ex.Message);
+            }
+            finally//最終要處理的事情
+            {
+                Console.WriteLine("既然都犯錯了，那就收工吃飯吧!");
+            }
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day26-04
+        /// throw
+        /// </summary>
+        void Day27_04()
+        {
+            try
+            {
+                Console.WriteLine("請輸入1~10任一數");
+                int number = Convert.ToInt32(Console.ReadLine());
+
+                //判斷是否有超過範圍
+                if (number < 1 || number > 10)
+                {
+                    //拋出超出範圍的異常
+                    throw new IndexOutOfRangeException();
+                }
+                else
+                {
+                    Console.WriteLine("你輸入了 : " + number);
+                }
+            }
+            catch (Exception ex)//捕捉所有發生的錯誤，如果不知道可能會發生的錯誤可以使用此類別
+            {
+                //ex.Message可得到簡易的錯誤描述，如果需要詳情，建議使用 ex.ToString()
+                Console.WriteLine(ex.Message);
+            }
+            finally//最終要處理的事情
+            {
+                Console.WriteLine("既然都犯錯了，那就收工吃飯吧!");
+            }
+
+            Console.ReadKey();
+        }
+    }
+    /// <summary>
+    ///  Day26-02
+    /// 定義計算的類別
+    /// </summary>
     class Calculate
     {
         //宣告靜態法來計算整數
