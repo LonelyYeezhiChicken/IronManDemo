@@ -12,11 +12,69 @@ namespace CsharpDemo
     {
         static void Main(string[] args)
         {
-           
+          
             Console.ReadKey();
         }
     }
-    //定義雞的類別
+    // 定義計算的類別
+    class Calculate
+    {
+        //宣告靜態法來計算整數
+        public static int Divide(int x, int y)
+        {
+            return x * y;
+        }
+        //宣告靜態法來計算浮點數
+        public static double Divide(double x, double y)
+        {
+            return x * y;
+        }
+    }
+    /// <summary>
+    ///  Day26-01
+    /// 定義計算的類別
+    /// </summary>
+    class Calculate1
+    {
+        //宣告靜態法來計算整數
+        public static int DivideInt(int x, int y)
+        {
+            return x * y;
+        }
+        //宣告靜態法來計算浮點數
+        public static double DivideDouble(double x, double y)
+        {
+            return x * y;
+        }
+    }
+    class Day26
+    {
+        /// <summary>
+        /// Day26-01
+        /// 不同的計算方法
+        /// </summary>
+        void Day26_01()
+        {
+            Console.WriteLine("Int : " + Calculate1.DivideInt(10, 20));
+            Console.WriteLine("Double : " + Calculate1.DivideDouble(10.11, 20.22));
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day26-02
+        /// 多載
+        /// </summary>
+        void Day26_02()
+        {
+            Console.WriteLine("Int : " + Calculate.Divide(10, 20));
+            Console.WriteLine("Double : " + Calculate.Divide(10.11, 20.22));
+            Console.ReadKey();
+        }
+
+    }
+    /// <summary>
+    /// Day25-01
+    /// 定義雞的類別
+    /// </summary>
     class Chicken
     {
         //宣告一個雞數量的靜態變數
@@ -28,7 +86,10 @@ namespace CsharpDemo
             ChickenCount += 3;
         }
     }
-    //定義農夫的類別
+    /// <summary>
+    /// Day25-01
+    /// 定義農夫的類別
+    /// </summary>
     class Farmer
     {
         public void GoToMarket()
@@ -77,9 +138,8 @@ namespace CsharpDemo
             }
             Console.ReadKey();
         }
-        
-    }
 
+    }
     /// <summary>
     /// Day24-03
     /// 豬的類別

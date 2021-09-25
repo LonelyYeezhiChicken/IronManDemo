@@ -26,3 +26,4 @@
 23. [[Day23]C# 雞礎觀念- 物件導向(oop)~屬性(Property)](https://ithelp.ithome.com.tw/articles/10270718)
 24. [[Day24]C# 雞礎觀念- 物件導向(oop)~建構方法(Constructor)](https://ithelp.ithome.com.tw/articles/10271607)
 25. [Day25]C# 雞礎觀念- 共產主義者~靜態成員
+26. [Day26]C# 雞礎觀念- 物件導向(oop)~ 多載(Overload)
