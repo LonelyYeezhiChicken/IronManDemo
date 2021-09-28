@@ -25,6 +25,7 @@
 22. [[Day22]C# 雞礎觀念- 物件導向(oop)~物件(Object)](https://ithelp.ithome.com.tw/articles/10269967)
 23. [[Day23]C# 雞礎觀念- 物件導向(oop)~屬性(Property)](https://ithelp.ithome.com.tw/articles/10270718)
 24. [[Day24]C# 雞礎觀念- 物件導向(oop)~建構方法(Constructor)](https://ithelp.ithome.com.tw/articles/10271607)
-25. [Day25]C# 雞礎觀念- 共產主義者~靜態成員
-26. [Day26]C# 雞礎觀念- 物件導向(oop)~ 多載(Overload)
-27. [Day27]C# 雞礎觀念- 做錯事該怎麼辦呢?~錯誤處理
+25. [[Day25]C# 雞礎觀念- 共產主義者~靜態成員](https://ithelp.ithome.com.tw/articles/10271844)
+26. [[Day26]C# 雞礎觀念- 物件導向(oop)~ 多載(Overload)](https://ithelp.ithome.com.tw/articles/10271905)
+27. [[Day27]C# 雞礎觀念- 做錯事該怎麼辦呢?~錯誤處理](https://ithelp.ithome.com.tw/articles/10271928)
+28. [[Day28]C# 雞礎觀念- 物件導向(oop)~ 繼承](https://ithelp.ithome.com.tw/articles/10273517)

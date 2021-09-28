@@ -6,20 +6,149 @@ using System.Threading.Tasks;
 
 namespace CsharpDemo
 {
-
-
     class Program
     {
         static void Main(string[] args)
         {
-            
+            //實例化鳥類
+            Chicken chickenClass = new Chicken();
+            //先個別印特徵
+            Console.WriteLine("各別顯示特徵");
+            chickenClass.ChickenFeature1();
+            chickenClass.ChickenFeature2();
+            chickenClass.BirdsFeature1();
+            chickenClass.BirdsFeature2();
+            chickenClass.VertebrateFeature1();
+            chickenClass.VertebrateFeature2();
+            chickenClass.VertebrateFeature3();
+
+            //一次全印
+            Console.WriteLine();
+            Console.WriteLine("一次列出所有特徵");
+            chickenClass.ShowALLChickenFeature();
+            Console.ReadKey();
+        }
+    }
+    //雞類病繼承鳥類
+    class Chicken : Birds
+    {
+        //特徵1:會呼吸
+        public void ChickenFeature1()
+        {
+            Console.WriteLine("我有有雞冠");
+        }
+        //特徵2:有脊椎
+        public void ChickenFeature2()
+        {
+            Console.WriteLine("我會咕咕叫");
+        }
+        //顯示所有特徵
+        public void ShowALLChickenFeature()
+        {
+            //直接用脊椎動物類的全部顯示方法
+            ShowALLBirdsFeature();
+            ChickenFeature1();
+            ChickenFeature2();
+        }
+    }
+
+    //鳥類，並且繼承脊椎動物類
+    class Birds : vertebrate
+    {
+        //特徵1:會呼吸
+        public void BirdsFeature1()
+        {
+            Console.WriteLine("我有翅膀");
+        }
+        //特徵2:有脊椎
+        public void BirdsFeature2()
+        {
+            Console.WriteLine("我會下蛋");
+        }
+        //顯示所有特徵
+        public void ShowALLBirdsFeature()
+        {
+            //直接用脊椎動物類的全部顯示方法
+            ShowALLVertebrateFeature();
+            BirdsFeature1();
+            BirdsFeature2();
+        }
+    }
+    //脊椎動物類
+    class vertebrate
+    {
+        //特徵1:會呼吸
+        public void VertebrateFeature1()
+        {
+            Console.WriteLine("我會呼吸");
+        }
+        //特徵2:有脊椎
+        public void VertebrateFeature2()
+        {
+            Console.WriteLine("我有脊椎");
+        }
+        //特徵3:有體溫
+        public void VertebrateFeature3()
+        {
+            Console.WriteLine("我有體溫");
+        }
+        //顯示所有特徵
+        public void ShowALLVertebrateFeature()
+        {
+            VertebrateFeature1();
+            VertebrateFeature2();
+            VertebrateFeature3();
+        }
+    }
+    class Day28
+    {
+        /// <summary>
+        /// Day28-01
+        /// 雞底類別
+        /// </summary>
+        void Day28_01()
+        {
+            //實例化脊椎動物類
+            vertebrate vertebrateClass = new vertebrate();
+            //先個別印特徵
+            Console.WriteLine("各別顯示特徵");
+            vertebrateClass.VertebrateFeature1();
+            vertebrateClass.VertebrateFeature2();
+            vertebrateClass.VertebrateFeature3();
+            //一次全印
+            Console.WriteLine();
+            Console.WriteLine("一次列出所有特徵");
+            vertebrateClass.ShowALLVertebrateFeature();
+            Console.ReadKey();
+        }
+
+        /// <summary>
+        /// Day28-02
+        /// 衍生類別
+        /// </summary>
+        void Day28_02()
+        {
+            //實例化鳥類
+            Birds birdsClass = new Birds();
+            //先個別印特徵
+            Console.WriteLine("各別顯示特徵");
+            birdsClass.BirdsFeature1();
+            birdsClass.BirdsFeature2();
+            birdsClass.VertebrateFeature1();
+            birdsClass.VertebrateFeature2();
+            birdsClass.VertebrateFeature3();
+
+            //一次全印
+            Console.WriteLine();
+            Console.WriteLine("一次列出所有特徵");
+            birdsClass.ShowALLBirdsFeature();
             Console.ReadKey();
         }
     }
     class Day27
     {
         /// <summary>
-        /// Day26-01
+        /// Day27-01
         /// Exception
         /// </summary>
         void Day27_01()
@@ -193,7 +322,7 @@ namespace CsharpDemo
     /// Day25-01
     /// 定義雞的類別
     /// </summary>
-    class Chicken
+    class Chicken1
     {
         //宣告一個雞數量的靜態變數
         public static int ChickenCount = 30;
@@ -213,7 +342,7 @@ namespace CsharpDemo
         public void GoToMarket()
         {
             //使用靜態變數不需要實例化
-            Chicken.ChickenCount -= 8;
+            Chicken1.ChickenCount -= 8;
         }
     }
     class Day25
@@ -230,9 +359,9 @@ namespace CsharpDemo
                 Console.WriteLine("---新的一天--");
                 Console.WriteLine("今天 : " + i + "號");
                 //新的一天需要生新的雞
-                Chicken chickenClass = new Chicken();
+                Chicken1 chickenClass = new Chicken1();
                 chickenClass.NewDayChicken();
-                Console.WriteLine("目前農場有 : " + Chicken.ChickenCount + "隻雞");
+                Console.WriteLine("目前農場有 : " + Chicken1.ChickenCount + "隻雞");
 
                 //判斷今天是否有要去市場
                 if ((i % 2) == 0)
@@ -241,10 +370,10 @@ namespace CsharpDemo
                     Farmer farmerClass = new Farmer();
                     Console.WriteLine("農夫載雞去賣了...");
                     farmerClass.GoToMarket();
-                    Console.WriteLine("賣完雞後剩下 : " + Chicken.ChickenCount + "隻雞");
+                    Console.WriteLine("賣完雞後剩下 : " + Chicken1.ChickenCount + "隻雞");
                 }
                 //判斷雞還剩幾隻
-                if (Chicken.ChickenCount <= 0)
+                if (Chicken1.ChickenCount <= 0)
                 {
                     Console.WriteLine();
                     Console.WriteLine("!!!!!!!雞被賣光光了!!!!!");
