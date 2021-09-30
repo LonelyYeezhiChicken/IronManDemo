@@ -29,3 +29,5 @@
 26. [[Day26]C# 雞礎觀念- 物件導向(oop)~ 多載(Overload)](https://ithelp.ithome.com.tw/articles/10271905)
 27. [[Day27]C# 雞礎觀念- 做錯事該怎麼辦呢?~錯誤處理](https://ithelp.ithome.com.tw/articles/10271928)
 28. [[Day28]C# 雞礎觀念- 物件導向(oop)~ 繼承](https://ithelp.ithome.com.tw/articles/10273517)
+29. [[Day29]C# 雞礎觀念- 物件導向(oop)~介面(Interface)](https://ithelp.ithome.com.tw/articles/10274806)
+30. [Day30]C# 不雞礎觀念- Install Tailwind Css with ASP.NET MVC5

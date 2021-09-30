@@ -8,28 +8,61 @@ namespace CsharpDemo
 {
     class Program
     {
+        ///有包含介面的宣告方式,前面可先選方式
+       public static IATM chickenAtm = new ChickenATM();
+
         static void Main(string[] args)
         {
-            //實例化鳥類
-            Chicken chickenClass = new Chicken();
-            //先個別印特徵
-            Console.WriteLine("各別顯示特徵");
-            chickenClass.ChickenFeature1();
-            chickenClass.ChickenFeature2();
-            chickenClass.BirdsFeature1();
-            chickenClass.BirdsFeature2();
-            chickenClass.VertebrateFeature1();
-            chickenClass.VertebrateFeature2();
-            chickenClass.VertebrateFeature3();
-
-            //一次全印
-            Console.WriteLine();
-            Console.WriteLine("一次列出所有特徵");
-            chickenClass.ShowALLChickenFeature();
-            Console.ReadKey();
         }
     }
-    //雞類病繼承鳥類
+    //ATM介面
+    interface IATM
+    {
+        //方法:存款
+        void PayIn(int amount);
+        //方法:收款
+        bool GetMoney(int amount);
+        //屬性:帳戶餘額
+        int Balance { get; }
+    }
+    //雞頭牌ATM
+    public class ChickenATM : IATM //需要繼承介面
+    {
+        //私有變數
+        private int blance;
+
+        //繼承後，就必須有介面裡面定義的方法
+        //方法:存款
+        public void PayIn(int amount)
+        {
+            blance += amount;
+        }
+        //方法:收款
+        public bool GetMoney(int amount)
+        {
+            //判斷餘額是否足夠
+            if (blance >= amount)
+            {
+                blance -= amount;
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("餘額不足，取款失敗!");
+                return false;
+            }
+        }
+
+        //屬性:帳戶餘額
+        public int Balance
+        {
+            get
+            {
+                return blance;
+            }
+        }
+    }
+    //雞類並繼承鳥類
     class Chicken : Birds
     {
         //特徵1:會呼吸
@@ -51,7 +84,6 @@ namespace CsharpDemo
             ChickenFeature2();
         }
     }
-
     //鳥類，並且繼承脊椎動物類
     class Birds : vertebrate
     {
@@ -100,6 +132,47 @@ namespace CsharpDemo
             VertebrateFeature3();
         }
     }
+    class Day29
+    {
+        /// <summary>
+        /// Day29-01
+        /// 介面
+        /// </summary>
+        void Day29_01()
+        {
+            //實例化脊椎動物類
+
+            //先讓客人選擇功能
+            Console.WriteLine();
+            Console.WriteLine("請選擇需要模式");
+            Console.WriteLine("存款請按1，領款請按2");
+            string goFuncton = Console.ReadLine();
+
+
+            //判斷要使用哪個方法
+            if (goFuncton == "1")//領錢
+            {
+                Console.WriteLine("請輸入要存入的金額!");
+                int amount = Convert.ToInt32(Console.ReadLine());
+                //付款方法
+                chickenAtm.PayIn(amount);
+            }
+            else if (goFuncton == "2")
+            {
+                Console.WriteLine("請輸入要領取的金額!");
+                int amount = Convert.ToInt32(Console.ReadLine());
+                //付款方法
+                chickenAtm.GetMoney(amount);
+            }
+
+            Console.WriteLine("目前餘額 : " + chickenAtm.Balance);
+
+            //這邊用遞迴來讓方法可以持續輪迴
+            string[] array = new string[0];
+            Main(array);
+            Console.ReadKey();
+        }
+    }
     class Day28
     {
         /// <summary>
@@ -142,6 +215,30 @@ namespace CsharpDemo
             Console.WriteLine();
             Console.WriteLine("一次列出所有特徵");
             birdsClass.ShowALLBirdsFeature();
+            Console.ReadKey();
+        }
+        /// <summary>
+        /// Day28-03
+        /// 衍生類別-雞
+        /// </summary>
+        void Day28_03()
+        {
+            //實例化雞類
+            Chicken chickenClass = new Chicken();
+            //先個別印特徵
+            Console.WriteLine("各別顯示特徵");
+            chickenClass.ChickenFeature1();
+            chickenClass.ChickenFeature2();
+            chickenClass.BirdsFeature1();
+            chickenClass.BirdsFeature2();
+            chickenClass.VertebrateFeature1();
+            chickenClass.VertebrateFeature2();
+            chickenClass.VertebrateFeature3();
+
+            //一次全印
+            Console.WriteLine();
+            Console.WriteLine("一次列出所有特徵");
+            chickenClass.ShowALLChickenFeature();
             Console.ReadKey();
         }
     }
